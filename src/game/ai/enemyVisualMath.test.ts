@@ -69,3 +69,15 @@ describe("deathQuatSamples", () => {
     expect(times[times.length - 1]).toBe(duration);
   });
 });
+
+describe("boneNameVariants", () => {
+  it("cobre as duas convenções de nomes Mixamo", () => {
+    expect(boneNameVariants("mixamorig:Spine")).toEqual(["mixamorig:Spine", "mixamorigSpine"]);
+    expect(boneNameVariants("mixamorigSpine1")).toEqual(["mixamorigSpine1"]);
+  });
+
+  it("nomes fora do prefixo Mixamo voltam como estão", () => {
+    expect(boneNameVariants("Root")).toEqual(["Root"]);
+    expect(boneNameVariants("")).toEqual([""]);
+  });
+});
