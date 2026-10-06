@@ -27,6 +27,19 @@ export function clampAimPitch(pitch: number): number {
   return Math.min(0.6, Math.max(-0.6, pitch));
 }
 
+/**
+ * Variantes de nome de bone aceitas nos rigs Mixamo. Existe mais de uma
+ * convenção em circulação (`mixamorig:Spine` no Soldier.glb original do
+ * three.js; `mixamorigSpine` em builds re-exportados sem os dois-pontos) —
+ * as duas devem casar para hitboxes/muzzle ancorarem em qualquer GLB.
+ */
+export function boneNameVariants(name: string): string[] {
+  if (!name.startsWith("mixamorig")) return [name];
+  const stripped = name.replace("mixamorig:", "mixamorig");
+  if (stripped === name) return [name];
+  return [name, stripped];
+}
+
 export const DEATH_FALL_ANGLE = -Math.PI / 2; // queda de costas sobre o eixo X do rig
 
 /**

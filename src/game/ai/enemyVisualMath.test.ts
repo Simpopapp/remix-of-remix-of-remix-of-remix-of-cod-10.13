@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import * as THREE from "three";
-import { clampAimPitch, deathQuatSamples, gaitWeights } from "./enemyVisualMath";
+import { boneNameVariants, clampAimPitch, deathQuatSamples, gaitWeights } from "./enemyVisualMath";
 
 describe("gaitWeights", () => {
   it("parado é 100% idle", () => {
@@ -65,8 +65,19 @@ describe("deathQuatSamples", () => {
     expect(last.angleTo(fall)).toBeLessThan(1e-3);
     // duração: 0.8 s com amostras monotônicas
     expect(times[0]).toBe(0);
-    for (let i = 1; i < times.length; i++)
-      expect(times[i]!).toBeGreaterThan(times[i - 1]!);
+    for (let i = 1; i < times.length; i++) expect(times[i]!).toBeGreaterThan(times[i - 1]!);
     expect(times[times.length - 1]).toBe(duration);
+  });
+});
+
+describe("boneNameVariants", () => {
+  it("cobre as duas convenções de nomes Mixamo", () => {
+    expect(boneNameVariants("mixamorig:Spine")).toEqual(["mixamorig:Spine", "mixamorigSpine"]);
+    expect(boneNameVariants("mixamorigSpine1")).toEqual(["mixamorigSpine1"]);
+  });
+
+  it("nomes fora do prefixo Mixamo voltam como estão", () => {
+    expect(boneNameVariants("Root")).toEqual(["Root"]);
+    expect(boneNameVariants("")).toEqual([""]);
   });
 });

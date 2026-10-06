@@ -19,10 +19,10 @@
 - [x] Colliders por manifesto; zero BoxGeometry de cenário
 - Gates: build OK + lint OK (0 erros após --fix) + vitest 38/38 + auditoria traverse (auditBoxes=0/215 malhas) + screenshots /tmp/browser/v3-audit — status em `docs/planning/stages/stage-V3-status.md`
 
-## Fase V4 — Inimigos skinned
-- [ ] EnemyVisual com mixer/blend por velocidade, mira no spine
-- [ ] Hitboxes por bone, arma no bone, clips de morte
-- Gates: build + lint + vitest + Playwright estados de animação
+## Fase V4 — Inimigos skinned ✅
+- [x] EnemyVisual com mixer/blend por velocidade, mira no spine
+- [x] Hitboxes por bone, arma no bone, clips de morte
+- Gates: build OK (tsc 0) + lint OK (0 erros) + vitest 47/47 + Playwright estados de animação OK (0 erros de console; 40 hit meshes; morte verificada) — ver docs/planning/stages/stage-V4-status.md e reports/stage-V4-eval.md. Fix: convenção de nomes de bone (`boneNameVariants`).
 
 ## Fase V5 — Armas e mãos FPS
 - [ ] ViewmodelV2 glTF com braços, câmera de viewmodel
