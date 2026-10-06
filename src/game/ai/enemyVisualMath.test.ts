@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import * as THREE from "three";
-import { clampAimPitch, deathQuatSamples, gaitWeights } from "./enemyVisualMath";
+import { boneNameVariants, clampAimPitch, deathQuatSamples, gaitWeights } from "./enemyVisualMath";
 
 describe("gaitWeights", () => {
   it("parado é 100% idle", () => {
