@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { clone as skeletonClone } from "three/examples/jsm/utils/SkeletonUtils.js";
 import type { GLTF } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { clampAimPitch, deathQuatSamples, gaitWeights } from "./enemyVisualMath";
+import { boneNameVariants, clampAimPitch, deathQuatSamples, gaitWeights } from "./enemyVisualMath";
 
 /**
  * Visual skinned do inimigo (Fase V4, PRD RM-05) — browser-only.
@@ -77,8 +77,13 @@ export class EnemyVisual {
       this.materials.push(clone);
     });
 
-    const bone = (name: string): THREE.Bone | null =>
-      (model.getObjectByName(name) as THREE.Bone | undefined) ?? null;
+    const bone = (name: string): THREE.Bone | null => {
+      for (const variant of boneNameVariants(name)) {
+        const found = model.getObjectByName(variant) as THREE.Bone | undefined;
+        if (found) return found;
+      }
+      return null;
+    };
     this.spine = bone("mixamorig:Spine");
     this.spine1 = bone("mixamorig:Spine1");
     const head = bone("mixamorig:Head");
