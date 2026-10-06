@@ -1,0 +1,171 @@
+{
+  "generatedAt": "2026-10-05T19:33:14.303Z",
+  "totalMB": 41.32,
+  "firstFrameMB": 18.03,
+  "budgetTotalMB": 120,
+  "budgetFirstFrameMB": 40,
+  "assets": [
+    {
+      "id": "asphalt",
+      "mb": 1.36,
+      "priority": "P0",
+      "ok": true
+    },
+    {
+      "id": "dirt",
+      "mb": 2.77,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "gravel",
+      "mb": 3.68,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "brown_mud",
+      "mb": 2.2,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "brick-wall-02",
+      "mb": 3.23,
+      "priority": "P0",
+      "ok": true
+    },
+    {
+      "id": "worn-brick-wall",
+      "mb": 3.14,
+      "priority": "P0",
+      "ok": true
+    },
+    {
+      "id": "concrete-block-wall-03",
+      "mb": 2.14,
+      "priority": "P0",
+      "ok": true
+    },
+    {
+      "id": "damaged-plaster",
+      "mb": 2.59,
+      "priority": "P0",
+      "ok": true
+    },
+    {
+      "id": "rusty-corrugated-iron",
+      "mb": 1.86,
+      "priority": "P0",
+      "ok": true
+    },
+    {
+      "id": "scuffed-cement",
+      "mb": 2.04,
+      "priority": "P0",
+      "ok": true
+    },
+    {
+      "id": "hdri-night",
+      "mb": 1.66,
+      "priority": "P0",
+      "ok": true
+    },
+    {
+      "id": "covered_car",
+      "mb": 1.53,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "concrete_road_barrier_02",
+      "mb": 1.03,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "Barrel_01",
+      "mb": 0.46,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "barrel_03",
+      "mb": 0.34,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "old_military_crate",
+      "mb": 0.65,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "ammo_box",
+      "mb": 0.28,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "metal_jerrycan_green",
+      "mb": 0.71,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "plastic_crate_01",
+      "mb": 1.22,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "cardboard_box_01",
+      "mb": 0.63,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "old_tyre",
+      "mb": 0.48,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "exterior_aircon_unit",
+      "mb": 1.81,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "rollershutter_door",
+      "mb": 0.37,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "modular_chainlink_fence",
+      "mb": 3.74,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "utility_box_01",
+      "mb": 0.35,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "lut-military",
+      "mb": 0.01,
+      "priority": "P1",
+      "ok": true
+    },
+    {
+      "id": "draco-decoder",
+      "mb": 1.01,
+      "priority": "P1",
+      "ok": true
+    }
+  ]
+}
