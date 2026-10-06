@@ -65,8 +65,7 @@ describe("deathQuatSamples", () => {
     expect(last.angleTo(fall)).toBeLessThan(1e-3);
     // duração: 0.8 s com amostras monotônicas
     expect(times[0]).toBe(0);
-    for (let i = 1; i < times.length; i++)
-      expect(times[i]!).toBeGreaterThan(times[i - 1]!);
+    for (let i = 1; i < times.length; i++) expect(times[i]!).toBeGreaterThan(times[i - 1]!);
     expect(times[times.length - 1]).toBe(duration);
   });
 });
